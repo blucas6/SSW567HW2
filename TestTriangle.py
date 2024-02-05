@@ -38,13 +38,13 @@ class TestTriangles(unittest.TestCase):
     def testBounds2(self):
         self.assertEqual(classifyTriangle(-1, 10, 10), 'InvalidInput', '-1,10,10 is invalid')
     
-    def isTriangle(self):
+    def testisTriangle(self):
         self.assertEqual(classifyTriangle(10,2,3), 'NotATriangle', '10,2,3 is not a triangle')
 
-    def validInputs1(self):
+    def testvalidInputs1(self):
         self.assertEqual(classifyTriangle('A','A','A'), 'InvalidInput', 'A,A,A is not valid input')
     
-    def validInputs2(self):
+    def testvalidInputs2(self):
         self.assertEqual(classifyTriangle(1.0,2.065,45.999), 'InvalidInput', 'Floats are not valid input')
     
 
