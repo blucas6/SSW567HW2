@@ -30,7 +30,10 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(3,4,3), 'Isoceles', '3,4,3 is an Isoceles triangle')
 
     def testBounds1(self):
-        self.assertEqual(classifyTriangle(201, 201, 201), 'InvalidInput', '201,201,201 is invalid')
+        self.assertEqual(classifyTriangle(200, 200, 200), 'Equilateral', '200,200,200 is an Equilateral triangle')
+    
+    def testBounds3(self):
+        self.assertEqual(classifyTriangle(1, 0, 2), 'InvalidInput', '1,0,2 is invalid')
         
     def testBounds2(self):
         self.assertEqual(classifyTriangle(-1, 10, 10), 'InvalidInput', '-1,10,10 is invalid')
